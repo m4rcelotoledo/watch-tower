@@ -11,7 +11,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres-latest
+        image: postgres
         env:
           POSTGRES_PASSWORD: postgres
         ports: ["5432:5432"]
