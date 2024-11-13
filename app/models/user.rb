@@ -14,5 +14,5 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 8 }
   validates :store_id, presence: true, if: :employee?
 
-  enum role: { employee: 0, admin: 1 }
+  enum :role, { employee: 0, admin: 1 }
 end

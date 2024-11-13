@@ -6,5 +6,5 @@ class Appointment < ApplicationRecord
 
   validates :event_time, presence: true
 
-  enum kind: { check_in: 0, check_out: 1 }
+  enum :kind, { check_in: 0, check_out: 1 }
 end
