@@ -13,15 +13,15 @@ It's a Rails application (API-only) to management the resources above by users a
 ## Technical Informations and dependencies
 
 ```code
-* Ruby              - version 3.3.0
-* Rails             - version 7.2.2
-* RSpec Rails       - version 7.0.1
-* Rubocop           - version 1.59.0
+* Ruby              - version 3.4.2
+* Rails             - version 8.0.2
+* RSpec Rails       - version 7.1.0
+* Rubocop           - version 1.77.0
 * cancancan         - version 3.6.1
 * devise-jwt        - version 0.12.1
-* PostgreSQL        - version 16
-* Docker            - version 27.2.1
-* Docker Compose    - version 2.29.5
+* PostgreSQL        - version 17
+* Docker            - version 28.2.2
+* Docker Compose    - version 2.37.1
 ```
 
 ## To use
@@ -29,7 +29,7 @@ It's a Rails application (API-only) to management the resources above by users a
 Clone the project:
 
 ``` Shell
-git clone git@github.com:marcelotoledo5000/watch-tower.git
+git clone git@github.com:m4rcelotoledo/watch-tower.git
 cd watch-tower
 ```
 
@@ -53,7 +53,7 @@ host: localhost   # when using localhost
 
 System dependencies:
 
-* Install and configure the database: [Postgresql-10](https://www.postgresql.org/download/)
+* Install and configure the database: [Postgresql-17](https://www.postgresql.org/download/)
 
 And then:
 
@@ -72,7 +72,7 @@ To see the application in action, starts the rails server to able [http://localh
 
 ### Dockerfile
 
-[Dockerfile is here](https://github.com/marcelotoledo5000/Dockerfiles)
+[Dockerfile is here](https://github.com/m4rcelotoledo/Dockerfiles)
 
 ### API Documentation
 
@@ -555,10 +555,10 @@ Watch Tower is open source, and we are grateful for
 [everyone][contributors] who have contributed so far or want to start.
 
 [codebeat-badge]: https://codebeat.co/badges/79b5a436-3241-4d15-b961-04c6fddc6001
-[codebeat]: https://codebeat.co/projects/github-com-marcelotoledo5000-watch-tower-master
+[codebeat]: https://codebeat.co/projects/github-com-m4rcelotoledo-watch-tower-master
 
-[codecov-badge]: https://codecov.io/gh/marcelotoledo5000/watch-tower/branch/master/graph/badge.svg
-[codecov]: https://codecov.io/gh/marcelotoledo5000/watch-tower
+[codecov-badge]: https://codecov.io/gh/m4rcelotoledo/watch-tower/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/m4rcelotoledo/watch-tower
 
-[Github-Actions]: https://github.com/marcelotoledo5000/watch-tower/workflows/Ruby/badge.svg
-[Github]: https://github.com/marcelotoledo5000/watch-tower/workflows/Ruby/badge.svg
+[Github-Actions]: https://github.com/m4rcelotoledo/watch-tower/workflows/Ruby/badge.svg
+[Github]: https://github.com/m4rcelotoledo/watch-tower/workflows/Ruby/badge.svg
