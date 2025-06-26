@@ -1,4 +1,12 @@
-# watch_tower 0.2.10 (Feb 12, 2022)
+# watch_tower 0.2.11 (Jun 26, 2024)
+
+* Bump of ruby and gems
+* Update Rubocop setup
+* Update README.md
+
+  *Marcelo Toledo*
+
+## watch_tower 0.2.10 (Feb 12, 2022)
 
 * Bump a lot of gems
 * Remove CodeClimate
