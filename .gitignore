@@ -26,6 +26,8 @@
 # Ignore coverage
 coverage
 
+.tool-versions
+
 # rspec
 /spec/examples.txt
 
