@@ -1,6 +1,6 @@
 # Watch Tower
 
-[![codebeat badge][codebeat-badge]][codebeat] [![Coverage][codecov-badge]][codecov] [![Ruby][Github-Actions]][Github]
+[![codebeat badge][codebeat-badge]][codebeat] [![Coverage][codecov-badge]][codecov] [![CI][Github-Actions]][Github]
 
 ## About this project
 
@@ -560,5 +560,5 @@ Watch Tower is open source, and we are grateful for
 [codecov-badge]: https://codecov.io/gh/m4rcelotoledo/watch-tower/branch/master/graph/badge.svg
 [codecov]: https://codecov.io/gh/m4rcelotoledo/watch-tower
 
-[Github-Actions]: https://github.com/m4rcelotoledo/watch-tower/workflows/Ruby/badge.svg
-[Github]: https://github.com/m4rcelotoledo/watch-tower/workflows/Ruby/badge.svg
+[Github-Actions]: https://github.com/m4rcelotoledo/watch-tower/workflows/CI/badge.svg
+[Github]: https://github.com/m4rcelotoledo/watch-tower/workflows/CI/badge.svg
