@@ -22,7 +22,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).
-      permit(:visitor_id, :store_id, :kind, :event_time)
+    params.expect(appointment: %i[visitor_id store_id kind event_time])
   end
 end

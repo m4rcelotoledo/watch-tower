@@ -39,7 +39,7 @@ describe 'Appointments' do
     end
 
     context 'when is bad request' do
-      let(:error_msg) { 'param is missing or the value is empty: appointment' }
+      let(:error_msg) { 'param is missing or the value is empty or invalid: appointment' }
 
       before { post appointments_path, params: {}, headers: headers }
 
@@ -47,10 +47,23 @@ describe 'Appointments' do
       it { expect(json[:message]).to match(/#{error_msg}/) }
     end
 
-    context 'when the request is invalid' do
+    context 'when is a bad request missing field' do
       before do
         post appointments_path,
              params: { appointment: { field: '' } },
+             headers: headers
+      end
+
+      it 'returns status code 400' do
+        expect(response).to have_http_status :bad_request
+        expect(json).not_to be_empty
+      end
+    end
+
+    context 'when the request is invalid' do
+      before do
+        post appointments_path,
+             params: { appointment: { visitor_id: '' } },
              headers: headers
       end
 

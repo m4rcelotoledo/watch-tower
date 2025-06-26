@@ -32,7 +32,7 @@ describe 'Visitors' do
     end
 
     context 'when is bad request' do
-      let(:error_msg) { 'param is missing or the value is empty: visitor' }
+      let(:error_msg) { 'param is missing or the value is empty or invalid: visitor' }
 
       before { post visitors_path, params: {}, headers: headers }
 
@@ -43,7 +43,7 @@ describe 'Visitors' do
     context 'when the request is invalid' do
       before do
         post visitors_path,
-             params: { visitor: { cnpj: '' } },
+             params: { visitor: { cpf: '' } },
              headers: headers
       end
 
