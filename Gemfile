@@ -2,37 +2,24 @@
 
 source 'https://rubygems.org'
 
-# Use specific branch of Rails
-gem 'rails', github: 'rails/rails', branch: '7-2-stable'
+ruby '3.4.2'
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem 'kredis'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[windows jruby]
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem 'jbuilder'
-gem 'active_model_serializers', '~> 0.10.14'
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+gem 'active_model_serializers', '~> 0.10.15'
 gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', require: false
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise-jwt', '~> 0.12.1'
-gem 'dotenv-rails', '~> 3.1', '>= 3.1.4'
+gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
 gem 'kaminari', '~> 1.2'
 gem 'pg', '~> 1.5'
-gem 'puma', '~> 6.4'
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
+gem 'puma', '~> 6.6'
 gem 'rack-cors'
+gem 'rails', '~> 8.0', '>= 8.0.2'
+gem 'tzinfo-data'
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  # gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
-
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem 'brakeman', require: false
+  gem 'brakeman'
   gem 'codecov', require: false
   gem 'database_cleaner'
   gem 'factory_bot_rails'
