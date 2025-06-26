@@ -10,6 +10,6 @@ class ApplicationController < ActionController::API
   private
 
   def page_permitted
-    params.permit![:page]
+    params.permit(:page)[:page]
   end
 end
