@@ -7,10 +7,12 @@
 # Layout/SpaceInsideArrayLiteralBrackets:
 #   Enabled: false
 
-require:
+plugins:
+  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-rspec_rails
 
 AllCops:
   Exclude:
@@ -21,10 +23,13 @@ AllCops:
 
   NewCops: enable
 
-  TargetRailsVersion: 7.2
-  TargetRubyVersion: 3.3.0
+  TargetRailsVersion: 8.0
+  TargetRubyVersion: 3.4
 
   UseCache: false
+
+FactoryBot/ExcessiveCreateList:
+  Enabled: false
 
 Layout/DotPosition:
   EnforcedStyle: trailing
