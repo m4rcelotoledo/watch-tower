@@ -46,7 +46,7 @@ class StoresController < ApplicationController
 
   # TODO: need to handle the format of the input data (cnpj)
   def store_params
-    params.require(:store).permit(:cnpj, :name)
+    params.expect(store: %i[cnpj name])
   end
 
   def search_params

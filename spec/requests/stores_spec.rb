@@ -29,9 +29,18 @@ describe 'Stores' do
     end
 
     context 'when is bad request' do
-      let(:error_msg) { 'param is missing or the value is empty: store' }
+      let(:error_msg) { 'param is missing or the value is empty or invalid: store' }
 
       before { post stores_path, params: {}, headers: headers }
+
+      it { expect(response).to have_http_status :bad_request }
+      it { expect(json[:message]).to match(/#{error_msg}/) }
+    end
+
+    context 'when is bad request with invalid params' do
+      let(:error_msg) { 'param is missing or the value is empty or invalid: store' }
+
+      before { post stores_path, params: { store: { field: '' } }, headers: headers }
 
       it { expect(response).to have_http_status :bad_request }
       it { expect(json[:message]).to match(/#{error_msg}/) }

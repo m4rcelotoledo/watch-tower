@@ -46,7 +46,7 @@ class VisitorsController < ApplicationController
 
   # TODO: need to handle the format of the input data (cpf)
   def visitor_params
-    params.require(:visitor).permit(:cpf, :name, :profile_photo, :store_id)
+    params.expect(visitor: %i[cpf name profile_photo store_id])
   end
 
   def search_params

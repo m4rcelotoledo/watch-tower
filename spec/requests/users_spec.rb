@@ -53,7 +53,7 @@ describe 'Users' do
 
     context 'when the request is invalid' do
       let(:invalid_params) { {} }
-      let(:error_msg) { 'param is missing or the value is empty: user' }
+      let(:error_msg) { 'param is missing or the value is empty or invalid: user' }
 
       before { post users_path, params: invalid_params, headers: headers }
 
