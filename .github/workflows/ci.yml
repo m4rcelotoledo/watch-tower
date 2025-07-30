@@ -72,6 +72,11 @@ jobs:
 
       - name: Run RSpec tests
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           DEVISE_JWT_SECRET_KEY: ${{ secrets.DEVISE_JWT_SECRET_KEY }}
-        run: bundle exec rspec -fd
+        run: bundle exec rspec --format progress
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/.resultset.json
