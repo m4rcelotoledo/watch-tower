@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.4.2'
+ruby '3.4.5'
 
 gem 'active_model_serializers', '~> 0.10.15'
 gem 'bcrypt', '~> 3.1'

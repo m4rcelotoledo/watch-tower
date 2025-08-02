@@ -13,7 +13,7 @@ It's a Rails application (API-only) to management the resources above by users a
 ## Technical Informations and dependencies
 
 ```code
-* Ruby              - version 3.4.2
+* Ruby              - version 3.4.5
 * Rails             - version 8.0.2
 * RSpec Rails       - version 7.1.0
 * Rubocop           - version 1.77.0
