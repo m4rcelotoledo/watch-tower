@@ -20,7 +20,6 @@ gem 'tzinfo-data'
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman'
-  gem 'codecov'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
