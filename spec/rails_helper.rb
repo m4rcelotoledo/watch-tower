@@ -5,9 +5,7 @@ require 'simplecov'
 SimpleCov.start do
   enable_coverage :branch
   SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
-    [
-      SimpleCov::Formatter::HTMLFormatter
-    ]
+    [SimpleCov::Formatter::HTMLFormatter]
   )
 end
 
