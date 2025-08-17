@@ -174,7 +174,8 @@ describe 'Stores' do
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Store with 'id'=100/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to eq("Couldn't find Store with 'id'=\"100\"")
       end
     end
 
@@ -224,7 +225,8 @@ describe 'Stores' do
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Store with 'id'=100/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to eq("Couldn't find Store with 'id'=\"100\"")
       end
     end
 
@@ -260,7 +262,8 @@ describe 'Stores' do
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Store with 'id'=100/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to eq("Couldn't find Store with 'id'=\"100\"")
       end
     end
 
