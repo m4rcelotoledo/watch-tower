@@ -200,7 +200,8 @@ describe 'Visitors' do
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Visitor with 'id'=100/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to eq("Couldn't find Visitor with 'id'=\"100\"")
       end
     end
 
@@ -255,7 +256,8 @@ describe 'Visitors' do
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Visitor with 'id'=100/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to eq("Couldn't find Visitor with 'id'=\"100\"")
       end
     end
 
@@ -290,14 +292,15 @@ describe 'Visitors' do
 
     context 'when the record does not exist' do
       let(:id) { 100 }
-      let(:message) { "Couldn't find Visitor with 'id'=#{id}" }
+      let(:message) { "Couldn't find Visitor with 'id'=\"#{id}\"" }
 
       before { delete visitor_path(id), headers: headers }
 
       it { expect(response).to have_http_status :not_found }
 
       it 'returns a not found message' do
-        expect(response.body).to match(/#{message}/)
+        parsed = response.parsed_body
+        expect(parsed['message']).to match(/#{message}/)
       end
     end
 
