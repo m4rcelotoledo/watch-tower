@@ -14,7 +14,7 @@ gem 'kaminari', '~> 1.2'
 gem 'pg', '~> 1.6'
 gem 'puma', '~> 7.0'
 gem 'rack-cors'
-gem 'rails', '~> 8.0', '>= 8.0.2'
+gem 'rails', '~> 8.0'
 gem 'tzinfo-data'
 
 group :development, :test do
