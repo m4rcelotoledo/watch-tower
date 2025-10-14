@@ -47,7 +47,7 @@ describe 'Users' do
         post users_path, params: valid_params, headers: headers
       end
 
-      it { expect(response).to have_http_status :unprocessable_entity }
+      it { expect(response).to have_http_status :unprocessable_content }
       it { expect(json[:message]).to match(/#{error_msg}/) }
     end
 
@@ -68,7 +68,7 @@ describe 'Users' do
 
       it 'returns status code 422' do
         expect(json).not_to be_empty
-        expect(response).to have_http_status :unprocessable_entity
+        expect(response).to have_http_status :unprocessable_content
         expect(json[:message]).to match(/(minimum is 8 characters)/)
       end
     end
