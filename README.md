@@ -1,19 +1,19 @@
 # Watch Tower
 
-[![codebeat badge][codebeat-badge]][codebeat] [![Coverage][codecov-badge]][codecov] [![CI][Github-Actions]][Github]
+[![Coverage][codecov-badge]][codecov] [![CI][Github-Actions]][Github]
 
 ## About this project
 
-This project is a control visitors system.
+This project is a visitor control system.
 
-The resources are: Stores, Visitors and their Entrances and Exits into the system (Appointments).
+The resources are: Stores, Visitors, and their Entrances and Exits into the system (Appointments).
 
-It's a Rails application (API-only) to management the resources above by users athough roles as Admin or Employee.
+It's a Rails application (API-only) to manage the resources above by users through roles as Admin or Employee.
 
-## Technical Informations and dependencies
+## Technical Information and Dependencies
 
 ```code
-* Ruby              - version 3.4.5
+* Ruby              - version 3.4.6
 * Rails             - version 8.0.2
 * RSpec Rails       - version 7.1.0
 * Rubocop           - version 1.77.0
@@ -553,9 +553,6 @@ status: 200 Ok
 
 Watch Tower is open source, and we are grateful for
 [everyone][contributors] who have contributed so far or want to start.
-
-[codebeat-badge]: https://codebeat.co/badges/79b5a436-3241-4d15-b961-04c6fddc6001
-[codebeat]: https://codebeat.co/projects/github-com-m4rcelotoledo-watch-tower-master
 
 [codecov-badge]: https://codecov.io/gh/m4rcelotoledo/watch-tower/branch/master/graph/badge.svg
 [codecov]: https://codecov.io/gh/m4rcelotoledo/watch-tower
