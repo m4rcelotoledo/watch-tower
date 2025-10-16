@@ -393,7 +393,7 @@ GEM
     ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
-    rubycritic (4.10.0)
+    rubycritic (4.11.0)
       flay (~> 2.13)
       flog (~> 4.7)
       launchy (>= 2.5.2)
