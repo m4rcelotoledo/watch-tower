@@ -171,7 +171,7 @@ GEM
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
-    faker (3.5.2)
+    faker (3.5.3)
       i18n (>= 1.8.11, < 2)
     flay (2.13.3)
       erubi (~> 1.10)
