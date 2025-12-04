@@ -9,7 +9,7 @@ gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', require: false
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise-jwt'
-gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
+gem 'dotenv-rails', '~> 3.2'
 gem 'kaminari', '~> 1.2'
 gem 'pg', '~> 1.6'
 gem 'puma', '~> 7.1'
