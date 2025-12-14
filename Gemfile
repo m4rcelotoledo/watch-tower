@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '3.4.6'
 
-gem 'active_model_serializers', '~> 0.10.15'
+gem 'active_model_serializers', '~> 0.10.16'
 gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', require: false
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
