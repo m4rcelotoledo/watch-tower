@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   # PUT /users/:id
   def update
-    User.find(params[:id]).then do |user|
+    User.find(params.expect(:id)).then do |user|
       user.update(user_params).then do |result|
         json_response result, :no_content
       end

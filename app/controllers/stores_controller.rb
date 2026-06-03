@@ -14,7 +14,7 @@ class StoresController < ApplicationController
 
   # GET /stores/:id
   def show
-    Store.find(params[:id]).then do |store|
+    Store.find(params.expect(:id)).then do |store|
       json_response store
     end
   end
@@ -28,7 +28,7 @@ class StoresController < ApplicationController
 
   # PUT /stores/:id
   def update
-    Store.find(params[:id]).then do |store|
+    Store.find(params.expect(:id)).then do |store|
       store.update(store_params).then do |result|
         json_response result, :no_content
       end
@@ -37,7 +37,7 @@ class StoresController < ApplicationController
 
   # DELETE /stores/:id
   def destroy
-    Store.find(params[:id]).destroy.then do |store|
+    Store.find(params.expect(:id)).destroy.then do |store|
       json_response store, :no_content
     end
   end

@@ -14,7 +14,7 @@ class VisitorsController < ApplicationController
 
   # GET /visitors/:id
   def show
-    Visitor.find(params[:id]).then do |visitor|
+    Visitor.find(params.expect(:id)).then do |visitor|
       json_response visitor
     end
   end
@@ -28,7 +28,7 @@ class VisitorsController < ApplicationController
 
   # PUT /visitors/:id
   def update
-    Visitor.find(params[:id]).then do |visitor|
+    Visitor.find(params.expect(:id)).then do |visitor|
       visitor.update(visitor_params).then do |result|
         json_response result, :no_content
       end
@@ -37,7 +37,7 @@ class VisitorsController < ApplicationController
 
   # DELETE /visitors/:id
   def destroy
-    Visitor.find(params[:id]).destroy.then do |visitor|
+    Visitor.find(params.expect(:id)).destroy.then do |visitor|
       json_response visitor, :no_content
     end
   end
