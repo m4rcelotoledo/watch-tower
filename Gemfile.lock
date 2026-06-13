@@ -92,7 +92,7 @@ GEM
     bigdecimal (4.1.2)
     bootsnap (1.24.6)
       msgpack (~> 1.2)
-    brakeman (8.0.4)
+    brakeman (8.0.5)
       racc
     builder (3.3.0)
     byebug (13.0.0)
@@ -499,4 +499,4 @@ RUBY VERSION
   ruby 3.4.6p54
 
 BUNDLED WITH
-  4.0.13
+  4.0.14
