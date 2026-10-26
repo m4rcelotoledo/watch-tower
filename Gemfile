@@ -10,7 +10,7 @@ gem 'bootsnap', require: false
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise-jwt'
 gem 'dotenv-rails', '~> 3.2'
-gem 'kaminari', '~> 1.2'
+gem 'kaminari', '~> 1.3'
 gem 'pg', '~> 1.6'
 gem 'puma', '~> 8.0'
 gem 'rack-cors'
