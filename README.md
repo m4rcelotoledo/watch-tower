@@ -28,14 +28,14 @@ It's a Rails application (API-only) to manage the resources above by users throu
 
 Clone the project:
 
-``` Shell
+```Shell
 git clone git@github.com:m4rcelotoledo/watch-tower.git
 cd watch-tower
 ```
 
 ### With Docker (better option)
 
-``` Shell
+```Shell
 script/setup    # => development bootstrap, preparing containers
 script/server   # => starts server
 script/console  # => starts console
@@ -46,18 +46,18 @@ script/test     # => running tests
 
 If you prefer, you'll need to update `config/database.yml`:
 
-``` Yaml
+```Yaml
 # host: db        # when using docker
 host: localhost   # when using localhost
 ```
 
 System dependencies:
 
-* Install and configure the database: [Postgresql-17](https://www.postgresql.org/download/)
+- Install and configure the database: [Postgresql-17](https://www.postgresql.org/download/)
 
 And then:
 
-``` Shell
+```Shell
 gem install bundler         # => install the last Bundler version
 bundle install              # => install the project's gems
 rails db:setup db:migrate   # => prepare the database
@@ -99,11 +99,11 @@ Headers:
 
 LOGIN / AUTHENTICATION
 
-* Authenticate to get token:
+- Authenticate to get token:
 
 Request:
 
-``` Shell
+```Shell
 curl -i \
 --request POST 'localhost:3000/login' \
 --header 'Content-Type: application/json' \
@@ -117,7 +117,7 @@ curl -i \
 
 Response:
 
-``` Shell
+```Shell
 HTTP/1.1 200 OK
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
@@ -142,11 +142,11 @@ status: 200 Ok
 
 LOGOUT
 
-* Destroy user session:
+- Destroy user session:
 
 Request:
 
-``` Shell
+```Shell
 curl -i \
 --request DELETE 'localhost:3000/logout' \
 --header 'Content-Type: application/json' \
@@ -169,7 +169,7 @@ Param: Body, JSON(application/json)
 
 Request with token:
 
-``` Shell
+```Shell
 curl --request POST 'localhost:3000/users' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTg2OTE5MTkwLCJleHAiOjE1ODY5MTk0OTAsImp0aSI6ImYxZGI0YjBjLWE0NGItNDEyNy04NDhkLWRkMmRkMTMxNmE4NCJ9.YbmLajIh3JqRdgB1asAIO1cEDCLX-UdW-Zwvb5LydRM' \
@@ -187,16 +187,16 @@ curl --request POST 'localhost:3000/users' \
 
 Response:
 
-``` json
+```json
 {
-  "id":1,
-  "login":"newlogin",
-  "name":"My Name",
-  "role":"admin",
-  "store_id":null,
-  "created_at":"2020-04-15T02:53:38.217Z",
-  "updated_at":"2020-04-15T02:53:38.217Z",
-  "email":"my@email.com"
+  "id": 1,
+  "login": "newlogin",
+  "name": "My Name",
+  "role": "admin",
+  "store_id": null,
+  "created_at": "2020-04-15T02:53:38.217Z",
+  "updated_at": "2020-04-15T02:53:38.217Z",
+  "email": "my@email.com"
 }
 ```
 
@@ -213,7 +213,7 @@ GET: http://DOMAIN/users
 
 Response:
 
-``` json
+```json
 [
   {
     "id": 1,
@@ -236,14 +236,14 @@ Response:
     "email": "employee@email.com"
   },
   {
-    "id":3,
-    "login":"newlogin",
-    "name":"My Name",
-    "role":"admin",
-    "store_id":null,
-    "created_at":"2020-04-15T02:53:38.217Z",
-    "updated_at":"2020-04-15T02:53:38.217Z",
-    "email":"my@email.com"
+    "id": 3,
+    "login": "newlogin",
+    "name": "My Name",
+    "role": "admin",
+    "store_id": null,
+    "created_at": "2020-04-15T02:53:38.217Z",
+    "updated_at": "2020-04-15T02:53:38.217Z",
+    "email": "my@email.com"
   }
 ]
 ```
@@ -407,7 +407,7 @@ Request:
 
 ```json
 {
-  "name": "Schamberger-Morissette",
+  "name": "Schamberger-Morissette"
 }
 ```
 
@@ -539,8 +539,8 @@ status: 200 Ok
 
 ### PENDING IDEAS
 
-* Need to handle the format of the input data (cpf and cnpj)
-* Fix some code smells and other issues reported by Code Climate
+- Need to handle the format of the input data (cpf and cnpj)
+- Fix some code smells and other issues reported by Code Climate
 
 ### STATUS CODE
 
@@ -556,6 +556,5 @@ Watch Tower is open source, and we are grateful for
 
 [codecov-badge]: https://codecov.io/gh/m4rcelotoledo/watch-tower/branch/master/graph/badge.svg
 [codecov]: https://codecov.io/gh/m4rcelotoledo/watch-tower
-
 [Github-Actions]: https://github.com/m4rcelotoledo/watch-tower/workflows/CI/badge.svg
 [Github]: https://github.com/m4rcelotoledo/watch-tower/workflows/CI/badge.svg
